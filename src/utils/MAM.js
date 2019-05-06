@@ -11,12 +11,10 @@ export const fetchData = async (root) => {
         const data_objects = [];
         const convertData = data => {
             const itemEvent = JSON.parse(trytesToAscii(data));
-            console.log("itemEvent", itemEvent)
             data_objects.push(itemEvent);
         }
 
-       let x =  await Mam.fetch(root, "public", null, convertData)
-        console.log("x", x)
+        await Mam.fetch(root, "public", null, convertData)
         return data_objects;
 
     } catch (e) {
