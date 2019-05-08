@@ -21,21 +21,12 @@ export default {
     return {
       data: null,
       root:
-        "KQYUAAFFUJYOXOYAV9CUZZUWSEVRKXQZPKTZIJMIKXBSEC9BXARVHSDQVZWLGRBCX9OXZHNBZZBMCUWHL",
+        "CHNFUVUOTQELISKXY9LUGZLBQFI9ZVXWCOBYETIIBCHKBJEJBCBE9GAVETZJFHSRXX9CAUFWPSEFXFEYG",
       loading: true
     };
   },
   methods: {
     loadData() {
-
-      /*
-      data = [
-        {name: 'sensor-1', data: {'2017-01-01 00:00:00 -0800': 3, '2017-01-02 00:00:00 -0800': 4}},
-        {name: 'sensor-2', data: {'2017-01-01 00:00:00 -0800': 3, '2017-01-02 00:00:00 -0800': 4}},
-        {name: 'sensor-3', data: {'2017-01-01 00:00:00 -0800': 5, '2017-01-02 00:00:00 -0800': 3}}
-      ];
-      */
-
       fetchData(this.root).then((snapshots) => {
        this.data = snapshots
         this.loading = false;
